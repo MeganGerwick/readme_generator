@@ -1,11 +1,12 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
 const util = require('util');
+const markdown = require('./generateMarkdown');
 
-const writeFileAsync = util.promisfy(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
-const questions = (data) =>
+const questions = () =>
     inquirer.prompt([
         {
             type: 'input',
@@ -48,23 +49,24 @@ const questions = (data) =>
             name: 'Contribute',
             message: 'What does the user need to know about contributing to the repo?',
         },
-
-
     ]);
 
 // function to write README file
-const writeToFile = (data) => {
-    '#' + ${ data.title }
-    ;
-}
+// const writeToFile = (data) => {
+//     '#' + ${data.title}
+//     ;
+// }
 
 // function to initialize program
-function questions() {
-.then((data) => writeFileAsync('README.md', writeToFile(data)))
-        .then(() => console.log('Successfully wrote ReadMe'))
-        .catch((err) => console.error(err));
-}
-
-// function call to initialize program
 questions()
+    .then((data) => writeFileAsync('README.md', markdown(data)))
+    .then(() => console.log('Successfully wrote ReadMe'))
+    .catch((err) => console.error(err));
+
+
+
+
+
+
+
 

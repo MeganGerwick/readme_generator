@@ -36,12 +36,12 @@ const questions = () =>
         },
         {
             type: 'input',
-            name: 'Install Dependencies',
+            name: 'Install',
             message: 'What command should be used to install dependencies?'['npm i'],
         },
         {
             type: 'input',
-            name: 'User Info',
+            name: 'Usage',
             message: 'What does the user need to know about using the repo?',
         },
         {
@@ -50,12 +50,6 @@ const questions = () =>
             message: 'What does the user need to know about contributing to the repo?',
         },
     ]);
-
-// function to write README file
-// const writeToFile = (data) => {
-//     '#' + ${data.title}
-//     ;
-// }
 
 // function to initialize program
 questions()

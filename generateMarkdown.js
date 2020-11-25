@@ -5,10 +5,10 @@ function generateMarkdown(data) {
 ${data.Description}
 
 ### Table of Contents
-[Installation](#installation)
-[Usage](#usage)
-[Contributing](#contributing)
-[Questions](#questions)
+-[Installation](#installation)
+-[Usage](#usage)
+-[Contributing](#contributing)
+-[Questions](#questions)
     
 ## Installation
 To install the necessary dependencies for this project, use the command ${data.Install}.
